@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/mainstyles.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" type="image/x-icon" href="images/ball_icon.ico"/>
     <title>Slammers</title>
@@ -16,15 +17,11 @@
         </div>
     </header>
     <div class="navbar">
-        <nav>
-            <ul>
-                <li><a class="active" href="index.html">Home</a> </li>
-                <li><a href="pages/about.html">About Volleyball</a> </li>
-                <li><a href="pages/ladder.html">Season Ladder</a> </li>
-                <li><a href="pages/signup.html">Sign-Up!</a> </li>
-                <li><a href="pages/contactus.html">Contact Us</a> </li>
-            </ul>
-        </nav>
+        <a class="active" href="index.html">Home</a>
+        <a href="pages/about.html">About Volleyball</a>
+        <a href="pages/ladder.html">Season Ladder</a>
+        <a href="pages/signup.html">Sign-Up</a>
+        <a href="pages/contactus.html">Contact Us</a>
     </div>
     <div class="main">
         <div class="content">
@@ -33,11 +30,14 @@
                     <h2>Announcements</h2>
                 </div>
                 <ul>
-                    <li>During August only, you can purchase 4 drinks for the price of 3 at the bar.</li>
-                    <li>New teams get a 20% discount on registration for the next season. Don't miss out, <a href="pages/signup.html">Sign-Up Now!</a></li>
+                    <li>During August only, you can purchase <strong>4 drinks for the price of 3</strong> at the bar.</li>
+                    <li>New teams get a <strong>20% discount</strong> on registration for the next season.
                     <li>Slammers Tournament: Get your nominations in now for the next 4-a-side weekend competition.</li>
                     <li>New season starts August 21st. Our current season rankings can be found <a href="pages/ladder.html">here.</a></li>
                 </ul>
+                <div class="clearfix">
+                    <a href="pages/signup.html"><button><small>Don't miss out, Sign-Up Now!</small></button></a>
+                </div>
             </section>
         </div>
 
@@ -46,9 +46,10 @@
                 <div class="content-Head">
                     <h2>Who Can Play?</h2>
                 </div>
-
-                <a title="By David Bunting from England (Beach Volleyball Classic 2007) [CC BY 2.0 (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3ABeach_Volleyball_Classic_2007_(1444259070).jpg" target="_blank"><img class="float-right" alt="Beach Volleyball Classic 2007" src="images/Volleyball_Classic_2007.jpg" width="250" height="375"> </a>
-
+                <div class="image-container-right">
+                    <a title="By David Bunting from England (Beach Volleyball Classic 2007) [CC BY 2.0 (http://creativecommons.org/licenses/by/2.0)], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File%3ABeach_Volleyball_Classic_2007_(1444259070).jpg" target="_blank"><img class="image" alt="Beach Volleyball Classic 2007" src="images/Volleyball_Classic_2007.jpg" width="250" height="375"> </a>
+                    <h4><small><a class=" italic" href="https://commons.wikimedia.org/wiki/File%3ABeach_Volleyball_Classic_2007_(1444259070).jpg">Image: Courtesy David Bunting.</a></small></h4>
+                </div>
                 <ul>
                     <li>There are 800 million players worldwide who play volleyball at least once a week.</li>
                     <li>Volleyball is a sport that is safe, fun and does not require extreme fitness.</li>
@@ -56,32 +57,23 @@
                     <li>For those who are a bit more competitive, the sport is fantastic because games can be really exciting and intense, but there’s always a net between you and your opponents.</li>
                     <li>Beach volleyball is suitable for people of all ages, and men and women alike.</li>
                 </ul>
-                <p class="italic">Disclaimer: Anyone considering starting a new sport or exercise program should see their doctor first.</p>
+                <p class="italic"><strong>Disclaimer:</strong> Anyone considering starting a new sport or exercise program should see their doctor first.</p>
             </section>
         </div>
     </div>
     <footer>
         <div class="footer">
-            <section>
-                <h2>Useful Links</h2>
-                <ul>
-                    <li><a href="http://www.volleyball.org/"> Volleyball Worldwide </a> </li>|
-                    <li><a href="http://www.fivb.org/EN/beachvolleyball/"> FIVB International Federation of Volleyball, Beach </a> </li>|
-                    <li><a href="http://avp.com/"> Association of Volleyball Professionals </a> </li>
-                </ul>
-            </section>
-            <section>
-                <h2>Contact Us</h2>
-                <ul>
-                    <li> Phone: 4771 2233 </li>|
-                    <li> Fax: 4771 2244 </li>|
-                    <li> Address: 123 Pokemund Street, Cairnsville, Queensland. </li>|
-                    <li> email: <a href="mailto:slammers@gmail.com">slammers@gmail.com</a> </li>
-                </ul>
-            </section>
-            <section>
-                <h3>&copy; 2017 Cameron Green | <a href="#top">Back To The Top</a></h3>
-            </section>
+            <div>
+                <h3>Useful Links | <a href="#top">Back To The Top</a></h3>
+                <a href="http://www.volleyball.org/"> Volleyball Worldwide </a> / <a href="http://www.fivb.org/EN/beachvolleyball/"> FIVB International Federation of Volleyball, Beach </a> / <a href="http://avp.com/"> Association of Volleyball Professionals </a>
+            </div>
+            <div>
+                <h3><a href="pages/contactus.html">Slammers Beach Volleyball Contact Details:</a></h3>
+                Phone: 4771 2233 / Fax: 4771 2244 / Address: 123 Pokemund Street, Cairnsville, Queensland. / email: <a href="mailto:slammers@gmail.com">slammers@gmail.com</a>
+            </div>
+            <div class="copy">
+                &copy; 2017 Cameron Green
+            </div>
         </div>
     </footer>
 </div>

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../css/mainstyles.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" type="image/x-icon" href="../images/ball_icon.ico"/>
     <title>Slammers</title>
@@ -15,17 +16,13 @@
             <h1>Sign-Up</h1>
         </div>
     </header>
-    <nav>
-        <div class="navbar">
-            <ul>
-                <li><a href="../index.html">Home</a> </li>
-                <li><a href="about.html">About Volleyball</a> </li>
-                <li><a href="ladder.html">Season Ladder</a> </li>
-                <li><a class="active" href="signup.html">Sign-Up!</a> </li>
-                <li><a href="contactus.html">Contact Us</a> </li>
-            </ul>
-        </div>
-    </nav>
+    <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About Volleyball</a>
+        <a href="ladder.html">Season Ladder</a>
+        <a class="active" href="signup.html">Sign-Up</a>
+        <a href="contactus.html">Contact Us</a>
+    </div>
     <div class="main">
         <a name="guidelines"></a>
         <div class="content">
@@ -33,7 +30,6 @@
                 <div class="content-Head">
                     <h2>Playing Guidelines</h2>
                 </div>
-
                 <ul>
                     <li>Participants in Slammers Beach Volleyball play at their own risk.</li>
                     <li>Anyone playing is responsible for their own safety and should only play if they are capable. Check with your doctor before you begin.</li>
@@ -48,7 +44,6 @@
                 <div class="content-Head">
                     <h2>Sign-Up Form</h2>
                 </div>
-
                 <form action="#">
                     <div class="sign-up">
                         <label><b>Contact Name</b></label>
@@ -73,12 +68,11 @@
                         <input type="radio" name="time" value="Day"> Day
                         <input type="radio" name="time" value="Night"> Night
 
-                        <p>By Signing up, you acknowledge that you have read and agree with our Playing Guidelines <a href="#guidelines">(above)</a></p>
-                        <label><b>I Agree to the Playing Guidelines</b></label>
+                        <label class="italic"><b>By Signing up, I acknowledge that I have read and agree with Slammers Beach Volleyball's <a href="#guidelines">Playing Guidelines</a> as listed above.</b></label>
                         <input type="checkbox" required>
 
                         <div class="clearfix">
-                            <button type="submit" class="signupbtn">Sign-Up</button>
+                            <button type="submit">I agree, Sign me up!</button>
                         </div>
                     </div>
                 </form>
@@ -88,26 +82,17 @@
     </div>
     <footer>
         <div class="footer">
-            <section>
-                <h2>Useful Links</h2>
-                <ul>
-                    <li><a href="http://www.volleyball.org/"> Volleyball Worldwide </a> </li>|
-                    <li><a href="http://www.fivb.org/EN/beachvolleyball/"> FIVB International Federation of Volleyball, Beach </a> </li>|
-                    <li><a href="http://avp.com/"> Association of Volleyball Professionals </a> </li>
-                </ul>
-            </section>
-            <section>
-                <h2>Contact Us</h2>
-                <ul>
-                    <li> Phone: 4771 2233 </li>|
-                    <li> Fax: 4771 2244 </li>|
-                    <li> Address: 123 Pokemund Street, Cairnsville, Queensland. </li>|
-                    <li> email: <a href="mailto:slammers@gmail.com">slammers@gmail.com</a> </li>
-                </ul>
-            </section>
-            <section>
-                <h3>&copy; 2017 Cameron Green | <a href="#top">Back To The Top</a></h3>
-            </section>
+            <div>
+                <h3>Useful Links | <a href="#top">Back To The Top</a></h3>
+                <a href="http://www.volleyball.org/"> Volleyball Worldwide </a> / <a href="http://www.fivb.org/EN/beachvolleyball/"> FIVB International Federation of Volleyball, Beach </a> / <a href="http://avp.com/"> Association of Volleyball Professionals </a>
+            </div>
+            <div>
+                <h3><a href="../pages/contactus.html">Slammers Beach Volleyball Contact Details:</a></h3>
+                Phone: 4771 2233 / Fax: 4771 2244 / Address: 123 Pokemund Street, Cairnsville, Queensland. / email: <a href="mailto:slammers@gmail.com">slammers@gmail.com</a>
+            </div>
+            <div class="copy">
+                &copy; 2017 Cameron Green
+            </div>
         </div>
     </footer>
 </div>

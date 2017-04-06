@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../css/mainstyles.css" rel="stylesheet" type="text/css">
     <link rel="shortcut icon" type="image/x-icon" href="../images/ball_icon.ico"/>
     <title>Slammers</title>
@@ -15,33 +16,31 @@
             <h1>Season Ladder</h1>
         </div>
     </header>
-    <nav>
-        <div class="navbar">
-            <ul>
-                <li><a href="../index.html">Home</a> </li>
-                <li><a href="about.html">About Volleyball</a> </li>
-                <li><a class="active" href="ladder.html">Season Ladder</a> </li>
-                <li><a href="signup.html">Sign-Up!</a> </li>
-                <li><a href="contactus.html">Contact Us</a> </li>
-            </ul>
-        </div>
-    </nav>
+    <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About Volleyball</a>
+        <a class="active" href="ladder.html">Season Ladder</a>
+        <a href="signup.html">Sign-Up</a>
+        <a href="contactus.html">Contact Us</a>
+    </div>
     <div class="main">
+
         <table class="ladder">
+
             <thead>
             <tr>
                 <th class="content-Head" colspan="9"><h2>Current Ladder Standings</h2></th>
             </tr>
             <tr>
-                <th>Pos</th>
-                <th>Team</th>
-                <th>Played</th>
-                <th>Wins</th>
-                <th>Losses</th>
-                <th>Draws</th>
-                <th>Pts For</th>
-                <th>Pts Against</th>
-                <th>Points</th>
+                <th><strong>Pos</strong></th>
+                <th><strong>Team</strong></th>
+                <th><strong>Played</strong></th>
+                <th><strong>Wins</strong></th>
+                <th><strong>Losses</strong></th>
+                <th><strong>Draws</strong></th>
+                <th><strong>Pts For</strong></th>
+                <th><strong>Pts Against</strong></th>
+                <th><strong>Points</strong></th>
             </tr>
             </thead>
             <tbody>
@@ -157,32 +156,48 @@
             </tr>
             </tbody>
         </table>
-    </div>
 
+    </div>
     <footer>
         <div class="footer">
-            <section>
-                <h2>Useful Links</h2>
-                <ul>
-                    <li><a href="http://www.volleyball.org/"> Volleyball Worldwide </a> </li>|
-                    <li><a href="http://www.fivb.org/EN/beachvolleyball/"> FIVB International Federation of Volleyball, Beach </a> </li>|
-                    <li><a href="http://avp.com/"> Association of Volleyball Professionals </a> </li>
-                </ul>
-            </section>
-            <section>
-                <h2>Contact Us</h2>
-                <ul>
-                    <li> Phone: 4771 2233 </li>|
-                    <li> Fax: 4771 2244 </li>|
-                    <li> Address: 123 Pokemund Street, Cairnsville, Queensland. </li>|
-                    <li> email: <a href="mailto:slammers@gmail.com">slammers@gmail.com</a> </li>
-                </ul>
-            </section>
-            <section>
-                <h3>&copy; 2017 Cameron Green | <a href="#top">Back To The Top</a></h3>
-            </section>
+            <div>
+                <h3>Useful Links | <a href="#top">Back To The Top</a></h3>
+                <a href="http://www.volleyball.org/"> Volleyball Worldwide </a> / <a href="http://www.fivb.org/EN/beachvolleyball/"> FIVB International Federation of Volleyball, Beach </a> / <a href="http://avp.com/"> Association of Volleyball Professionals </a>
+            </div>
+            <div>
+                <h3><a href="../pages/contactus.html">Slammers Beach Volleyball Contact Details:</a></h3>
+                Phone: 4771 2233 / Fax: 4771 2244 / Address: 123 Pokemund Street, Cairnsville, Queensland. / email: <a href="mailto:slammers@gmail.com">slammers@gmail.com</a>
+            </div>
+            <div class="copy">
+                &copy; 2017 Cameron Green
+            </div>
         </div>
     </footer>
 </div>
+<script>
+    (function () {
+        var headertext = [];
+        var headers = document.querySelectorAll("thead");
+        var tablebody = document.querySelectorAll("tbody");
+
+        for(var i = 0; i < headers.length; i++) {
+            headertext[i]=[];
+            for (var j = 0, headrow; headrow = headers[i].rows[1].cells[j]; j++) {
+                var current = headrow;
+                headertext[i].push(current.textContent.replace(/\r?\n|\r/,""));
+            }
+        }
+
+        if (headers.length > 0) {
+            for (var h = 0, tbody; tbody = tablebody[h]; h++) {
+                for (var i = 0, row; row = tbody.rows[i]; i++) {
+                    for (var j = 0, col; col = row.cells[j]; j++) {
+                        col.setAttribute("data-th", headertext[h][j]);
+                    }
+                }
+            }
+        }
+    } ());
+</script>
 </body>
 </html>
